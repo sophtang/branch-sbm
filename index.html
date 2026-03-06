@@ -1,520 +1,678 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Branched Schrödinger Bridge Matching - Tang, Zhang, Tong, Chatterjee">
+    <meta name="description"
+        content="BranchSBM learns diverging velocity fields to reconstruct multi-modal target distributions, capturing branched evolution from a common origin to multiple distinct outcomes.">
+    <meta name="keywords"
+        content="Schrödinger bridge, flow matching, branching dynamics, single-cell, trajectory inference, optimal transport, generative modeling, machine learning">
+    <meta name="author" content="Sophia Tang, Yinuo Zhang, Alexander Tong, Pranam Chatterjee">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Chatterjee Lab">
+    <meta property="og:title" content="Branched Schrödinger Bridge Matching">
+    <meta property="og:description"
+        content="BranchSBM learns diverging velocity fields to reconstruct multi-modal target distributions, capturing branched evolution from a common origin to multiple distinct outcomes.">
+    <meta property="og:url" content="https://sophtang.github.io/branch-sbm">
+    <meta property="og:image" content="https://sophtang.github.io/branch-sbm/static/images/branchsbm.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Branched Schrödinger Bridge Matching - Research Preview">
+    <meta property="article:published_time" content="2026-01-01T00:00:00.000Z">
+    <meta property="article:author" content="Sophia Tang">
+    <meta property="article:section" content="Research">
+    <meta property="article:tag" content="Schrödinger bridge">
+    <meta property="article:tag" content="flow matching">
 
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ChatterjeeLab">
+    <meta name="twitter:creator" content="@sophtang_">
+    <meta name="twitter:title" content="Branched Schrödinger Bridge Matching">
+    <meta name="twitter:description"
+        content="BranchSBM learns diverging velocity fields to reconstruct multi-modal target distributions, capturing branched evolution from a common origin to multiple distinct outcomes.">
+    <meta name="twitter:image" content="https://sophtang.github.io/branch-sbm/static/images/branchsbm.png">
+    <meta name="twitter:image:alt" content="Branched Schrödinger Bridge Matching - Research Preview">
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
-  <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
+    <!-- Academic/Research Specific -->
+    <meta name="citation_title" content="Branched Schrödinger Bridge Matching">
+    <meta name="citation_author" content="Tang, Sophia">
+    <meta name="citation_author" content="Zhang, Yinuo">
+    <meta name="citation_author" content="Tong, Alexander">
+    <meta name="citation_author" content="Chatterjee, Pranam">
+    <meta name="citation_publication_date" content="2026">
+    <meta name="citation_conference_title" content="International Conference on Learning Representations (ICLR)">
+    <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2506.09007.pdf">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#7c3aed">
+    <meta name="msapplication-TileColor" content="#7c3aed">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://ajax.googleapis.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <title>Branched Schrödinger Bridge Matching | ICLR 2026</title>
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌳</text></svg>">
+    <link rel="apple-touch-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌳</text></svg>">
+
+    <!-- Critical CSS - Load synchronously -->
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <!-- Non-critical CSS - Load asynchronously -->
+    <link rel="preload" href="static/css/bulma-carousel.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="static/css/bulma-slider.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="static/css/fontawesome.all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Fallback for browsers that don't support preload -->
+    <noscript>
+        <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+        <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    </noscript>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- KaTeX for math equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+
+    <!-- Defer non-critical JavaScript -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script defer src="static/js/bulma-carousel.min.js"></script>
+    <script defer src="static/js/bulma-slider.min.js"></script>
+    <script defer src="static/js/index.js"></script>
+
+    <!-- Structured Data for Academic Papers -->
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "Branched Schrödinger Bridge Matching",
+    "description": "BranchSBM learns diverging velocity fields to reconstruct multi-modal target distributions while simultaneously learning growth networks that allocate mass across branches.",
     "author": [
       {
         "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
+        "name": "Sophia Tang",
+        "affiliation": { "@type": "Organization", "name": "University of Pennsylvania" }
       },
       {
         "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
+        "name": "Yinuo Zhang",
+        "affiliation": { "@type": "Organization", "name": "Duke-NUS Medical School" }
       },
       {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
+        "@type": "Person",
+        "name": "Alexander Tong",
+        "affiliation": { "@type": "Organization", "name": "Mila, Université de Montréal" }
+      },
+      {
+        "@type": "Person",
+        "name": "Pranam Chatterjee",
+        "affiliation": { "@type": "Organization", "name": "University of Pennsylvania" }
       }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
+    ],
+    "datePublished": "2026-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "International Conference on Learning Representations (ICLR)"
+    },
+    "url": "https://sophtang.github.io/branch-sbm",
+    "image": "https://sophtang.github.io/branch-sbm/static/images/branchsbm.png",
+    "keywords": ["Schrödinger bridge", "flow matching", "branching dynamics", "single-cell", "trajectory inference", "optimal transport"],
+    "isAccessibleForFree": true,
+    "license": "https://opensource.org/licenses/MIT"
   }
   </script>
 </head>
+
 <body>
 
-
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
     </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
 
-  <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+    <main id="main-content">
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+        <!-- Hero / Title -->
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h1 class="title is-1 publication-title">Branched Schr&ouml;dinger Bridge Matching</h1>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                    <a href="https://sophtang.github.io/" target="_blank">Sophia
+                                        Tang</a><sup>1</sup>,</span>
+                                <span class="author-block">
+                                    <a href="https://www.linkedin.com/in/yinuozhang98/" target="_blank">Yinuo
+                                        Zhang</a><sup>2</sup>,</span>
+                                <span class="author-block">
+                                    <a href="https://www.alextong.net/" target="_blank">Alexander
+                                        Tong</a><sup>3</sup>,</span>
+                                <span class="author-block">
+                                    <a href="https://www.chatterjeelab.com/" target="_blank">Pranam
+                                        Chatterjee</a><sup>1</sup>
+                                </span>
+                            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block"><sup>1</sup>University of Pennsylvania &nbsp;&nbsp;
+                                    <sup>2</sup>Duke-NUS Medical School &nbsp;&nbsp; <sup>3</sup>AITHYRA<br>ICLR
+                                    2026</span>
+                            </div>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+                            <div class="column has-text-centered">
+                                <div class="publication-links">
+                                    <!-- Paper PDF -->
+                                    <span class="link-block">
+                                        <a href="https://arxiv.org/pdf/2506.09007.pdf" target="_blank"
+                                            class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                                            <span>Paper</span>
+                                        </a>
+                                    </span>
 
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+                                    <!-- GitHub -->
+                                    <span class="link-block">
+                                        <a href="https://github.com/sophtang/BranchSBM" target="_blank"
+                                            class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon"><i class="fab fa-github"></i></span>
+                                            <span>Code</span>
+                                        </a>
+                                    </span>
 
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                                    <!-- arXiv -->
+                                    <span class="link-block">
+                                        <a href="https://arxiv.org/abs/2506.09007" target="_blank"
+                                            class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon"><i class="ai ai-arxiv"></i></span>
+                                            <span>arXiv</span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+        <!-- Teaser Animation -->
+        <section class="hero teaser">
+            <div class="container is-max-desktop">
+                <div class="hero-body has-text-centered">
+                    <img src="static/images/branchsbm_anim.gif"
+                        alt="BranchSBM animation showing branched trajectory evolution"
+                        style="max-width: 100%; height: auto;">
+                    <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem; font-size: 1.35rem; line-height: 1.4; letter-spacing: 0em;">
+                        <strong>BranchSBM</strong> learns a set of <em>diverging velocity fields</em> to reconstruct <em>multi-modal target
+                        distributions</em> while simultaneously learning <em>growth networks</em> that allocate mass across branches. 🌳
+                        Guided by a <em>time-dependent potential energy function</em>, <strong>BranchSBM</strong> captures diverging,
+                        energy-minimizing dynamics without requiring intermediate-time supervision. 
+                    </h2>
+                </div>
+            </div>
+        </section>
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+        <!-- Abstract -->
+        <section class="section hero is-light">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Abstract</h2>
+                        <div class="content has-text-justified">
+                            <p>
+                                A <strong>key challenge</strong> in trajectory matching is reconstructing multi-modal marginals,
+                                particularly when modes diverge along distinct dynamical paths. Existing
+                                Schr&ouml;dinger bridge and flow matching frameworks approximate multi-modal
+                                distributions by simulating many <em>independent</em> particle trajectories, which are
+                                susceptible to mode collapse, with particles concentrating on dominant high-density
+                                modes or traversing only low-energy intermediate paths.
+                            </p>
+                            <p>
+                                To address this challenge, we introduce <strong>Branched Schr&ouml;dinger Bridge Matching
+                                    (BranchSBM)</strong>, a novel framework that learns a set of diverging velocity
+                                fields to reconstruct multi-modal target distributions while simultaneously learning
+                                growth networks that allocate mass across branches. Guided by a time-dependent potential
+                                energy function $V_t$, BranchSBM captures diverging, energy-minimizing dynamics
+                                without requiring intermediate-time supervision and can generate the full branched
+                                evolution from a single initial sample.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
+        <!-- Key Contributions -->
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column is-full-width">
+                        <h2 class="title is-3 has-text-centered">Key Contributions</h2>
+                        <div class="content has-text-justified">
+                            <ul>
+                                <li>We define the <strong>Branched Generalized Schr&ouml;dinger Bridge
+                                        problem</strong> and introduce BranchSBM, a novel matching framework that learns
+                                    optimal branched trajectories from an initial distribution to multiple target
+                                    distributions.</li>
+                                <li>We derive the <strong>Branched Conditional Stochastic Optimal Control
+                                        (CondSOC)</strong> problem as the sum of Unbalanced CondSOC objectives and
+                                    leverage a multi-stage training algorithm to learn the optimal branching drift and
+                                    growth fields that transport mass along a branched trajectory.</li>
+                                <li>We demonstrate the unique capability of BranchSBM to model <strong>dynamic
+                                        branching trajectories</strong> across various real-world problems, including 3D
+                                    navigation over LiDAR manifolds, modelling differentiating single-cell population
+                                    dynamics, and simulating heterogeneous cellular responses to drug perturbation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video -->
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column is-full-width">
+                        <h2 class="title is-3 has-text-centered">Reading Group Presentation</h2>
+                        <div class="publication-video">
+                            <iframe src="https://www.youtube.com/embed/inVYA0pQ4Wg" title="BranchSBM Video"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
+        <!-- Method Overview -->
+        <section class="section hero is-light">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered" style="margin-top: 2rem;">
+                    <div class="column is-full-width">
+                        <h2 class="title is-3 has-text-centered">Overview of Framework</h2>
+                        <div class="content has-text-justified">
+
+                            <h3 class="title is-4">Branched Generalized Schr&ouml;dinger Bridge Problem</h3>
+                            <p>
+                                We define the <strong>Branched Generalized Schr&ouml;dinger Bridge (GSB)</strong>
+                                problem as minimizing
+                                the sum of Unbalanced GSB problems
+                                across all branches.
+                                All mass begins along a <strong>primary path</strong> indexed $k = 0$ with
+                                initial weight 1. Over $t \in
+                                [0,1]$,
+                                mass is transferred across $K$ <strong>secondary branches</strong> with initial
+                                weight 0 and target
+                                weight $w^*_{1,k}$
+                                such that it minimizes the objective:
+                            </p>
+
+                            <div class="math-box">
+                                $$\min_{\{u_{t,k}, g_{t,k}\}_{k=0}^K} \int_0^1 \bigg\{ \underbrace{\mathbb{E}_{p_{t,0}} \left[
+                                \tfrac{1}{2} \|u_{t,0}(X_{t,0})\|_2^2 + V_t(X_{t,0}) \right] w_{t,0}}_{\text{primary branch}} + \underbrace{\sum_{k=1}^K
+                                \mathbb{E}_{p_{t,k}} \left[ \tfrac{1}{2} \|u_{t,k}(X_{t,k})\|_2^2 + V_t(X_{t,k}) \right]
+                                w_{t,k}}_{\text{secondary branches}} \bigg\} dt$$
+
+                                <p style="text-align: center; margin-top: -0.5rem; margin-bottom: 0;">
+                                    s.t. $\; dX_{t,k} = u_{t,k}(X_{t,k})dt + \sigma dB_t$, $\; X_0 \sim \pi_0$, $\;
+                                    X_{1,k}
+                                    \sim \pi_{1,k}$, $\; w_{0,k} = \delta_{k=0}$, $\; w_{1,k} = w^*_{1,k}$
+                                </p>
+                            </div>
+
+                            <p>
+                                When <strong>total mass is conserved</strong>, we enforce $\sum_{k=0}^K w_{t,k}
+                                = 1$ for all $t \in
+                                [0,1]$, which
+                                constrains the <strong>growth rates</strong> such that $g_{t,0}(X_{t,0}) +
+                                \sum_{k=1}^K g_{t,k}(X_{t,k})
+                                = 0$.
+                                The primary branch evolves from an initial weight of 1 according to
+                                $w_{t,0} = 1 + \int_0^t g_s(X_{s,0})ds$ and the $K$ secondary branches grow from weight
+                                0
+                                according to $w_{t,k} = \int_0^t g_s(X_{s,k})ds$.
+                            </p>
+
+                            <h3 class="title is-4">Branched Conditional Stochastic Optimal Control</h3>
+                            <p>
+                                We reformulate the Branched GSB problem as solving the <strong>Branched Conditional
+                                    Stochastic Optimal Control (CondSOC)</strong> problem, where
+                                we optimize
+                                a set of parameterized <strong>drift</strong> $\{u_{t,k}\}_{k=0}^K$ and
+                                <strong>growth</strong> $\{g_{t,k}\}_{k=0}^K$
+                                networks by
+                                minimizing the <strong>energy of the conditional trajectories</strong> between
+                                paired samples
+                                $(\boldsymbol{x}_0, \{\boldsymbol{x}_{1,k}\}_{k=0}^K) \sim \{p_{0,1,k}\}_{k=0}^K$:
+                            </p>
+
+                            <div class="math-box">
+                                $$\min_{\{u_{t,k}, g_{t,k}\}_{k=0}^K} \; \underbrace{\mathbb{E}_{(\boldsymbol{x}_0,
+                                \boldsymbol{x}_{1,0}) \sim \pi_{0,1,0}} \int_0^1 \bigg\{ \mathbb{E}_{p_{t|0,1,0}} \left[
+                                \tfrac{1}{2} \|u_{t,0}(X_{t,0})\|_2^2 + V_t(X_{t,0}) \right] w_{t,0} \bigg\} dt}_{\text{primary branch}} +
+                                \underbrace{\sum_{k=1}^K \mathbb{E}_{(\boldsymbol{x}_0, \boldsymbol{x}_{1,k}) \sim \pi_{0,1,k}}
+                                \int_0^1 \bigg\{ \mathbb{E}_{p_{t|0,1,k}} \left[ \tfrac{1}{2} \|u_{t,k}(X_{t,k})\|_2^2 +
+                                V_t(X_{t,k}) \right] w_{t,k} \bigg\} dt}_{\text{secondary branches}}$$
+                            </div>
+
+                            <p>
+                                This defines the objective for tractably solving the Branched GSB problem by
+                                conditioning on a
+                                discrete set of branched endpoint pairs in the dataset. When $g_{t,0} \equiv 0$ and
+                                $g_{t,k} \equiv 0$ for all $(\boldsymbol{x}, t) \in \mathbb{R}^d \times [0,1]$ and
+                                $k \in \{1, \ldots, K\}$, the Branched CondSOC problem reduces to the single path GSB
+                                problem.
+                            </p>
+
+                            <h3 class="title is-4">Multi-Stage Training</h3>
+                            <p>
+                                Our framework leverages a <strong>multi-stage training algorithm</strong> that enables
+                                stable and scalable learning of branched dynamics from data snapshots.
+                            </p>
+                            <h4>🌳 <strong>Stage 1: Learning Energy-Minimizing Branched Neural Interpolants</strong> 🌳</h4>
+                            <p>
+                                Since the optimal trajectory under the state cost $V_t(X_t) : \mathbb{R}^d \times [0,1]
+                                \to \mathbb{R}$ follows a <strong>non-linear cost manifold</strong>, given a pair of
+                                endpoints $(\boldsymbol{x}_0, \boldsymbol{x}_{1,k}) \sim \pi_{0,1,k}$, we train a
+                                <strong>neural path interpolant</strong> $\varphi_{t,\eta}(\boldsymbol{x}_0,
+                                \boldsymbol{x}_{1,k}) : \mathbb{R}^d \times \mathbb{R}^d \times [0,1] \to \mathbb{R}^d$
+                                that defines the intermediate state $\boldsymbol{x}_{t,\eta,k}$ and velocity
+                                $\dot{\boldsymbol{x}}_{t,\eta,k} = \partial_t \boldsymbol{x}_{t,\eta,k}$ at time $t$. We
+                                define $\boldsymbol{x}_{t,\eta,k}$ to be bounded at the endpoints as:
+                            </p>
+                            <div class="math-box">
+                                $$\boldsymbol{x}_{t, \eta, k}=(1-t)\boldsymbol{x}_0+t\boldsymbol{x}_{1,
+                                k}+t(1-t)\varphi_{t, \eta }(\boldsymbol{x}_0, \boldsymbol{x}_{1, k})$$
+                                $$\dot{\boldsymbol{x}}_{t, \eta, k}=\boldsymbol{x}_{1,
+                                k}-\boldsymbol{x}_0+t(1-t)\dot{\varphi}_{t, \eta }(\boldsymbol{x}_0, \boldsymbol{x}_{1,
+                                k})+(1-2t)\varphi_{t, \eta }(\boldsymbol{x}_0, \boldsymbol{x}_{1, k})$$
+                            </div>
+                            <p>
+                                To optimize $\varphi_{t,\eta}(\boldsymbol{x}_0, \boldsymbol{x}_{1,k})$ such that it
+                                predicts the <em>energy-minimizing trajectory</em>, we minimize the
+                                <strong>trajectory loss</strong>:
+                            </p>
+                            <div class="math-box">
+                                $$\mathcal{L}_{\text{traj}}(\eta) = \sum_{k=0}^K \int_0^1 \mathbb{E}_{(\boldsymbol{x}_0,
+                                \boldsymbol{x}_{1,k}) \sim \pi_{0,1,k}} \left[ \tfrac{1}{2}
+                                \|\dot{\boldsymbol{x}}_{t,\eta,k}\|_2^2 + V_t(\boldsymbol{x}_{t,\eta,k}) \right] dt$$
+                            </div>
+                            <p>
+                                After convergence, Stage 1 returns the network $\varphi^\star_{t,\eta}(\boldsymbol{x}_0,
+                                \boldsymbol{x}_{1,k})$ that generates the <strong>optimal conditional
+                                        velocity</strong> $\dot{\boldsymbol{x}}^\star_{t,\eta,k}$, which defines
+                                the matching objective in Stage 2.
+                            </p>
+
+                            <h4>🌳 <strong>Stage 2: Learning Branched Neural Velocity Fields</strong> 🌳</h4>
+                            <p>
+                                We parameterize a set of <strong>neural drift fields</strong>
+                                $u^\theta_{t,k}(\boldsymbol{x}_{t,k}) : \mathbb{R}^d \times [0,1] \to \mathbb{R}^d$ that
+                                generate the <strong>mixture of bridges</strong> defined in Stage 1 by
+                                minimizing the <strong>conditional flow matching loss</strong>:
+                            </p>
+                            <div class="math-box">
+                                $$\mathcal{L}_{\text{flow}}(\theta) = \sum_{k=0}^K \int_0^1
+                                \mathbb{E}_{(\boldsymbol{x}_0, \boldsymbol{x}_{1,k}) \sim \pi_{0,1,k}} \left\|
+                                \dot{\boldsymbol{x}}^\star_{t,\eta,k} - u^\theta_{t,k}(\boldsymbol{x}_{t,k})
+                                \right\|_2^2 \, dt$$
+                            </div>
+                            <h4>🌳 <strong>Stage 3: Learning Growth Networks</strong> 🌳</h4>
+                            <p>
+                                We <em>freeze the flow networks</em> $\{u^\theta_{t,k}\}_{k=0}^K$ and
+                                train only the growth networks $\{g^\phi_{t,k}\}_{k=0}^K$. The
+                                <strong>growth loss</strong> $\mathcal{L}_{\text{growth}}$ is a weighted
+                                combination of three components:
+                            </p>
+                            <p>
+                                <strong>Branched Energy Loss.</strong> To solve the Branched CondSOC problem, we
+                                minimize $\mathcal{L}_{\text{energy}}$ where the predicted weights $w^\phi_{t,k}$ evolve
+                                according to $w^\phi_{t,0} = 1 + \int_0^t g^\phi_{s,0}(X_{s,0})ds$ for the primary
+                                branch and $w^\phi_{t,k} = \int_0^t g^\phi_{s,k}(X_{s,k})ds$ for secondary branches:
+                            </p>
+                            <div class="math-box">
+                                $$\mathcal{L}_{\text{energy}}(\theta, \phi) = \int_0^1 \mathbb{E}_{\{p_{t,k}\}_{k=0}^K}
+                                \left\{ \left[ \tfrac{1}{2} \|u^\theta_{t,0}(X_{t,0})\|_2^2 + V_t(X_{t,0}) \right]
+                                w^\phi_{t,0} + \sum_{k=1}^K \left[ \tfrac{1}{2}\|u^\theta_{t,k}(X_{t,k})\|_2^2 +
+                                V_t(X_{t,k}) \right] w^\phi_{t,k} \right\} dt$$
+                            </div>
+                            <p>
+                                <strong>Weight Matching Loss.</strong> We minimize the difference between the
+                                <em>predicted weights</em> at $t=1$ and the <em>true population
+                                        fractions</em> $w^\star_{1,k} = N_k / N_{\text{total}}$:
+                            </p>
+                            <div class="math-box">
+                                $$\mathcal{L}_{\text{match}}(\phi) = \sum_{k=0}^K \mathbb{E}_{p_{1,k}} \left(
+                                w^\phi_{1,k} - w^\star_{1,k} \right)^2, \quad \text{s.t.} \; w^\phi_{1,k} = w_{0,k} +
+                                \int_0^1 g^\phi_{t,k}(X_{t,k}) dt$$
+                            </div>
+                            <p>
+                                <strong>Mass Conservation Loss.</strong> We enforce <em>conservation of total
+                                        mass</em> at all times $t \in [0,1]$ with $\mathcal{L}_{\text{mass}}$,
+                                which also penalizes negative weight predictions:
+                            </p>
+                            <div class="math-box">
+                                $$\mathcal{L}_{\text{mass}}(\phi) = \int_0^1 \mathbb{E}_{\{p_{t,k}\}_{k=0}^K} \left[
+                                \left( \sum_{k=0}^K w^\phi_{t,k} - w_t^{\text{total}} \right)^2 + \sum_{k=0}^K
+                                \max\left(0, -w^\phi_{t,k}\right) \right] dt$$
+                            </div>
+                            <p>
+                                The combined growth loss is then:
+                            </p>
+                            <div class="math-box">
+                                $$\mathcal{L}_{\text{growth}}(\phi) = \lambda_{\text{energy}}
+                                \mathcal{L}_{\text{energy}}(\theta, \phi) + \lambda_{\text{match}}
+                                \mathcal{L}_{\text{match}}(\phi) + \lambda_{\text{mass}} \mathcal{L}_{\text{mass}}(\phi)
+                                + \lambda_{\text{growth}} \sum_{k=0}^K \|g^\phi_{t,k}\|_2^2$$
+                            </div>
+                            <h4>🌳 <strong>Stage 4: Joint Training of Velocity and Growth Networks</strong> 🌳</h4>
+                            <p>
+                                In the final stage, we unfreeze all parameters and
+                                jointly train both the flow and growth networks
+                                $\{u^\theta_{t,k}, g^\phi_{t,k}\}_{k=0}^K$ by minimizing $\mathcal{L}_{\text{growth}}$
+                                from Stage 3 together with a <strong>reconstruction loss</strong>
+                                $\mathcal{L}_{\text{recons}}$ that ensures the endpoint
+                                        distribution at $t=1$ is maintained. The reconstruction loss
+                                penalizes generated samples $\tilde{x}_{1,k} \sim p_{1,k}$ whose $n$-nearest
+                                        neighbors $x_{1,k} \in \mathcal{N}_n(\tilde{x}_{1,k})$ from the
+                                data $x_{1,k} \sim \pi_{1,k}$ are further than a margin $\epsilon$:
+                            </p>
+                            <div class="math-box">
+                                $$\mathcal{L}_{\text{recons}}(\theta) = \sum_{k=0}^K \mathbb{E}_{p_{1,k}} \left[
+                                \sum_{x_{1,k} \in \mathcal{N}_n(\tilde{x}_{1,k})} \max\left(0, \|\tilde{x}_{1,k} -
+                                x_{1,k}\|_2 - \epsilon \right) \right]$$
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
+        <!-- Experiments -->
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column is-full-width">
+
+                        <h2 class="title is-3 has-text-centered">Experiments</h2>
+
+                        <!-- LiDAR -->
+                        <h3 class="title is-4">LiDAR Experiment &#x1F3D4;&#xFE0F;</h3>
+                        <div class="content has-text-justified">
+                            <p>
+                                As a proof of concept, we evaluate BranchSBM for navigating <em>branched paths</em> along the
+                                surface of a <strong>three-dimensional LiDAR manifold</strong>, from an initial distribution to two
+                                distinct target distributions while remaining on <em>low-altitude regions</em> of the manifold.
+                            </p>
+                        </div>
+                        <div class="has-text-centered">
+                            <img src="static/images/lidar.png"
+                                alt="LiDAR experiment showing branched 3D navigation over terrain"
+                                style="max-width: 100%; height: auto;" loading="lazy">
+                        </div>
+                        <br>
+
+                        <!-- Mouse Hematopoiesis -->
+                        <h3 class="title is-4">Mouse Hematopoiesis and Pancreatic &beta;-Cell Differentiation Modeling
+                            &#x1F9EB;</h3>
+                        <div class="content has-text-justified">
+                            <p>
+                                BranchSBM is uniquely positioned to model <strong>single-cell population dynamics</strong> where a
+                                homogeneous cell population (e.g., progenitor cells) differentiates into several
+                                distinct subpopulation branches, each of which independently undergoes <em>growth dynamics</em>.
+                                We evaluate BranchSBM on a <strong>mouse hematopoiesis scRNA-seq dataset</strong> containing three
+                                developmental time points representing progenitor cells differentiating into <em>two
+                                terminal cell fates</em>. Compared to a single-branch SBM, BranchSBM successfully learns
+                                distinct branching trajectories and accurately reconstructs intermediate cell states,
+                                demonstrating its ability to recover <em>lineage bifurcation dynamics</em>.
+                            </p>
+                        </div>
+                        <div class="has-text-centered">
+                            <img src="static/images/mouse.png" alt="Mouse hematopoiesis branching trajectories"
+                                style="max-width: 100%; height: auto;" loading="lazy">
+                        </div>
+                        <br>
+                        <div class="content has-text-justified">
+                            <p>
+                                We further evaluate on a <strong>pancreatic &beta;-cell differentiation dataset</strong> (<a
+                                    href="https://www.nature.com/articles/s41586-019-1168-5" target="_blank">Veres et
+                                    al., 2019</a>) containing 51,274 cells collected across <em>eight time points</em> as human
+                                pluripotent stem cells differentiate into pancreatic &beta;-like cells. Cells are
+                                projected into a 30-dimensional PCA space, and Leiden clustering is used to define <em>11
+                                terminal cell populations</em> at the final time point. BranchSBM is trained using <strong>only
+                                samples from the initial and final states</strong>, while intermediate distributions are inferred
+                                by learning trajectories constrained to the data manifold. Compared to baselines,
+                                BranchSBM significantly improves reconstruction of both intermediate and terminal
+                                distributions, achieving <em>lower Wasserstein distances</em> at validation time points.
+                            </p>
+                        </div>
+                        <div class="has-text-centered">
+                            <img src="static/images/veres.png" alt="Veres pancreatic beta-cell differentiation results"
+                                style="max-width: 100%; height: auto;" loading="lazy">
+                        </div>
+                        <br>
+
+                        <!-- Drug Perturbation -->
+                        <h3 class="title is-4">Simulating Cell Dynamics Under Drug Perturbation &#x1F489;</h3>
+                        <div class="content has-text-justified">
+                            <p>
+                                Predicting the effects of perturbation on <em>cell state dynamics</em> is a crucial problem for
+                                therapeutic design. We leverage BranchSBM to model the trajectories of a single cell
+                                line from a <em>single homogeneous state</em> to <em>multiple heterogeneous states</em> after a
+                                <strong>drug-induced perturbation</strong>. For the Clonidine perturbation data, BranchSBM reconstructs
+                                the ground-truth distributions, capturing the location and spread of the dataset,
+                                whereas single-branch SBM fails to differentiate cells in higher-dimensional principal
+                                components. We also show that BranchSBM can simulate trajectories in <strong>high-dimensional
+                                state spaces</strong> by scaling up to <em>150 PCs</em>.
+                            </p>
+                        </div>
+                        <div class="has-text-centered">
+                            <img src="static/images/clonidine.png" alt="Clonidine drug perturbation experiment results"
+                                style="max-width: 100%; height: auto;" loading="lazy">
+                        </div>
+                        <br>
+                        <div class="content has-text-justified">
+                            <p>
+                                We further show that BranchSBM can <strong>scale beyond two branches</strong> by
+                                modeling the perturbed cell population of <strong>Trametinib-treated cells</strong>, which diverge into
+                                <em>three distinct clusters</em>. BranchSBM was trained with three endpoints and single-branch
+                                SBM with one endpoint containing all three clusters on the top 50 PCs.
+                            </p>
+                        </div>
+                        <div class="has-text-centered">
+                            <img src="static/images/trametinib.png"
+                                alt="Trametinib three-branch perturbation experiment results"
+                                style="max-width: 100%; height: auto;" loading="lazy">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+        <!-- BibTeX -->
+        <section class="section" id="BibTeX">
+            <div class="container is-max-desktop content">
+                <div class="bibtex-header">
+                    <h2 class="title">BibTeX</h2>
+                    <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+                        <i class="fas fa-copy"></i>
+                        <span class="copy-text">Copy</span>
+                    </button>
+                </div>
+                <pre id="bibtex-code"><code>@article{tang2026branchsbm,
+  title={Branched Schrödinger Bridge Matching},
+  author={Tang, Sophia and Zhang, Yinuo and Tong, Alexander and Chatterjee, Pranam},
+  journal={14th International Conference on Learning Representations (ICLR 2026)},
+  year={2026},
+  url={https://arxiv.org/abs/2506.09007}
 }</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
+            </div>
+        </section>
 
+    </main>
 
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This page was built using the <a
+                                href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                            This website is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons
+                                Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+</body>
 
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</html>
