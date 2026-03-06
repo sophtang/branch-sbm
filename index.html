@@ -581,9 +581,9 @@
                                 projected into a 30-dimensional PCA space, and Leiden clustering is used to define <em>11
                                 terminal cell populations</em> at the final time point. BranchSBM is trained using <strong>only
                                 samples from the initial and final states</strong>, while intermediate distributions are inferred
-                                by learning trajectories constrained to the data manifold. Compared to baselines,
-                                BranchSBM significantly improves reconstruction of both intermediate and terminal
-                                distributions, achieving <em>lower Wasserstein distances</em> at validation time points.
+                                by learning trajectories constrained to the data manifold. BranchSBM not only reconstructs the multi-modal 
+                                terminal distribution at the final time point with superior accuracy against all baselines, but also produces 
+                                intermediate trajectories that are competitive with models trained directly on intermediate snapshots.
                             </p>
                         </div>
                         <div class="has-text-centered">
